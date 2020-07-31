@@ -1,0 +1,170 @@
+/* Desktop Header */
+
+@media only screen and (min-width: 900px) {
+  .header {
+    display: grid;
+    grid-template-columns: [left_header] 1fr [mid_header] 1fr [right_header] 1fr;
+    padding: 0.5em;
+    background-color: lightcyan;
+  }
+
+  .right_header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .left_header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .mid_header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  /* header links */
+
+  .header_link {
+    padding: 5px;
+    margin: 5px;
+    text-decoration: none;
+    color: black;
+    font-weight: 900;
+    font-size: 1.2em;
+  }
+
+  .header_link {
+    position: relative;
+  }
+
+  .header_link::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 6px;
+    bottom: 0;
+    left: 0;
+    background-color: red;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .header_link:hover::before {
+    visibility: visible;
+    width: 100%;
+  }
+
+  .header_link_active {
+    position: relative;
+  }
+
+  .header_link_active::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 6px;
+    bottom: 0;
+    left: 0;
+    background-color: red;
+    visibility: visible;
+    width: 100%;
+  }
+
+  /* Set Mobile Elements to None */
+  .menu_icon {
+    display: none;
+  }
+
+  .mobile_logo {
+    display: none;
+  }
+}
+
+/* Mobile Header */
+
+@media only screen and (max-width: 900px) {
+  .header {
+    display: flex;
+    flex-direction: row;
+    padding: 0.5em;
+    background-color: lightcyan;
+  }
+
+  .right_header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    flex-basis: 33%;
+  }
+
+  .left_header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-basis: 33%;
+  }
+
+  .mid_header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-basis: 33%;
+  }
+
+  .hamburger {
+    font-size: 2em;
+    padding: 0.2em;
+    cursor: pointer;
+  }
+
+  .close_button {
+    font-size: 2em;
+    cursor: pointer;
+    padding: 0.2em;
+  }
+
+  /* header links */
+
+  .header_links_mobile {
+    display: flex;
+    padding: 0.6em;
+    margin-bottom: 1em;
+    align-self: center;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+    border-bottom: 1px solid black;
+  }
+
+  .dropdown_home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 1em;
+    cursor: pointer;
+    background-color: lightcyan;
+    align-items: center;
+  }
+
+  .header_link_active {
+    border-bottom: 1px solid red;
+  }
+
+  .desktop_logo {
+    display: none;
+  }
+
+  .desktop_links {
+    display: none;
+  }
+}
