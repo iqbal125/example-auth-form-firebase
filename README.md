@@ -1,1 +1,1 @@
-# example-auth-form-firebase
+Auth0 authentication app
